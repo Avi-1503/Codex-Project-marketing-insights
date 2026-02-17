@@ -99,26 +99,27 @@ ORDER BY ReachCount_Youth desc;
 
 #Query 11
 #Where do respondents prefer to purchase energy drinks?
-#Query 12
 select Purchase_location, count(*) as prefer_purchase_location
 from fact_survey_responses
 group by Purchase_location
 order by prefer_purchase_location desc;
+
+#Query 12
 #What are the typical consumption situations for energy drinks among respondents?
-#Query 13
 select Typical_consumption_situations, count(*) as frequency
 from fact_survey_responses
 group by Typical_consumption_situations
 order by frequency desc;
-
-#What factors influence respondents purchase decisions, such as price range and limited edition packaging?
   
-#Query 14
+#Query 13
+#What factors influence respondents purchase decisions, such as limited edition packaging?
 select Limited_edition_packaging, count(*) as Survey_answer
 from fact_survey_responses
 group by Limited_edition_packaging
 order by Survey_answer desc;
 
+#Query 14
+#What factors influence respondents purchase decisions, such as price range 
 select Price_range, count(*) as desired_price
 from fact_survey_responses
 group by Price_range
